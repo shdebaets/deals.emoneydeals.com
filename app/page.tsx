@@ -152,7 +152,7 @@ export default function Checkout() {
               <div className="w-full overflow-hidden rounded-xl bg-black/70 aspect-[4/3]">
                 <img
                   src={x.itemImg}
-                  alt={x.result}
+                  
                   className="h-full w-full object-cover"
                 />
               </div>
