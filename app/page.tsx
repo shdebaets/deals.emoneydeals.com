@@ -21,7 +21,7 @@ export default function Checkout() {
         {/* LEFT */}
         <div className="lg:w-1/2">
           <h1 className="text-4xl font-extrabold sm:text-5xl leading-tight">
-            Build an Extra <span className="text-fuchsia-300">$1–3K/Month</span>{" "}
+            Build an Extra <span className="text-fuchsia-300">$2,000/Month</span>{" "}
             Flipping Hidden Clearance Deals
           </h1>
           <p className="mt-3 text-lg text-white/80">
@@ -38,7 +38,7 @@ export default function Checkout() {
               rel="noopener noreferrer"
               className="hover:text-fuchsia-300 transition"
             >
-              ⭐ <span className="font-semibold">4.9/5 verified rating</span> from
+              ⭐ <span className="font-semibold">4.8/5 verified rating</span> from
               real members on Whop
             </a>
             <div>
