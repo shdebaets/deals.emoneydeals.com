@@ -84,17 +84,17 @@ export default function Checkout() {
             {
               day: "Day 1 → Find",
               desc: "Use our AI to locate hidden clearance deals near you.",
-              img: "/images/how1.jpg",
+              img: "/success/aicheck.png.jpg",
             },
             {
               day: "Day 2 → Flip",
               desc: "Buy, list, and flip your first profitable item.",
-              img: "/images/how2.jpg",
+              img: "/success/listing.png.jpg",
             },
             {
               day: "Day 3 → Scale",
               desc: "Copy proven flips and start stacking consistent income.",
-              img: "/images/how3.jpg",
+              img: "/success/profit.png.jpg",
             },
           ].map((x) => (
             <div
