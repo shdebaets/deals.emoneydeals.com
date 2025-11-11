@@ -18,27 +18,29 @@ export default function Checkout() {
     <main className="page-bg min-h-screen px-5 pb-16 pt-10 text-white">
       {/* HERO */}
       <section className="mx-auto flex w-full max-w-6xl flex-col items-center text-center lg:flex-row lg:text-left lg:items-center lg:justify-between gap-10">
-        {/* LEFT CONTENT */}
+        {/* LEFT */}
         <div className="lg:w-1/2">
-          {/* HEADLINE */}
           <h1 className="text-4xl font-extrabold sm:text-5xl leading-tight">
             Build an Extra <span className="text-fuchsia-300">$1–3K/Month</span>{" "}
             Flipping Hidden Clearance Deals
           </h1>
-
-          {/* SUBHEAD – WHY DIFFERENT */}
           <p className="mt-3 text-lg text-white/80">
             In our <span className="font-semibold">3-Day First Flip Challenge</span>,
-            you’ll use our <span className="font-semibold">Clearance AI</span> +
-            real community data to find, buy & flip your first item for profit.
+            you’ll use our <span className="font-semibold">Clearance AI</span> +{" "}
+            real community data to find, buy & flip your first profitable item.
           </p>
 
           {/* SOCIAL PROOF */}
           <div className="mt-5 flex flex-col items-center lg:items-start gap-2 text-sm text-white/70">
-            <div>
+            <a
+              href="https://whop.com/emoney/emoney"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-fuchsia-300 transition"
+            >
               ⭐ <span className="font-semibold">4.9/5 verified rating</span> from
-              real members
-            </div>
+              real members on Whop
+            </a>
             <div>
               👥 <span className="font-semibold">5,000+ active resellers</span> inside
               eMoney
@@ -53,13 +55,13 @@ export default function Checkout() {
             Start Free 3-Day Challenge 🔓
           </button>
 
-          {/* FUD REDUCTION */}
+          {/* FUD */}
           <p className="mt-3 text-xs text-white/70">
             No experience needed • No big budget • Cancel anytime
           </p>
         </div>
 
-        {/* RIGHT – EMOTIONAL IMAGE */}
+        {/* RIGHT – IMAGE */}
         <div className="lg:w-1/2">
           <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-white/10 shadow-[0_0_40px_rgba(236,72,153,0.4)]">
             <img
@@ -78,36 +80,73 @@ export default function Checkout() {
       <section className="mx-auto mt-16 max-w-5xl text-center">
         <h2 className="text-2xl font-semibold">How It Works</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-3 text-sm">
-          <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
-            <p className="font-semibold mb-1">Day 1 → Find</p>
-            <p className="text-white/70">Use our AI to locate hidden clearance deals near you.</p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
-            <p className="font-semibold mb-1">Day 2 → Flip</p>
-            <p className="text-white/70">Buy, list, and flip your first profitable item.</p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
-            <p className="font-semibold mb-1">Day 3 → Scale</p>
-            <p className="text-white/70">Copy proven flips and start stacking consistent income.</p>
-          </div>
+          {[
+            {
+              day: "Day 1 → Find",
+              desc: "Use our AI to locate hidden clearance deals near you.",
+              img: "/images/how1.jpg",
+            },
+            {
+              day: "Day 2 → Flip",
+              desc: "Buy, list, and flip your first profitable item.",
+              img: "/images/how2.jpg",
+            },
+            {
+              day: "Day 3 → Scale",
+              desc: "Copy proven flips and start stacking consistent income.",
+              img: "/images/how3.jpg",
+            },
+          ].map((x) => (
+            <div
+              key={x.day}
+              className="rounded-2xl border border-white/10 bg-black/40 p-4 flex flex-col items-center"
+            >
+              <img
+                src={x.img}
+                alt={x.day}
+                className="mb-3 h-28 w-full object-cover rounded-lg"
+              />
+              <p className="font-semibold mb-1">{x.day}</p>
+              <p className="text-white/70">{x.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* PROOF SECTION */}
+      {/* REAL PEOPLE */}
       <section className="mx-auto mt-16 max-w-5xl text-center">
         <h2 className="text-2xl font-semibold">Real People. Real Profits.</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {[
-            { name: "Redwake", text: "$0.01 vanity → sold $250" },
-            { name: "Ryan", text: "Pokémon haul → $180 profit" },
-            { name: "Debra", text: "$600 item → $0.06 → flipped for hundreds" },
+            {
+              name: "Redwake",
+              text: "$0.01 vanity → sold $250",
+              img: "/images/win1.jpg",
+            },
+            {
+              name: "Ryan",
+              text: "Pokémon haul → $180 profit",
+              img: "/images/win2.jpg",
+            },
+            {
+              name: "Debra",
+              text: "$600 item → $0.06 → flipped for hundreds",
+              img: "/images/win3.jpg",
+            },
           ].map((x) => (
             <div
               key={x.name}
-              className="rounded-2xl border border-white/10 bg-black/40 p-4 text-sm"
+              className="rounded-2xl border border-white/10 bg-black/40 p-4 flex flex-col items-center"
             >
+              <img
+                src={x.img}
+                alt={x.name}
+                className="mb-3 h-28 w-full object-cover rounded-lg"
+              />
               <p className="font-semibold text-fuchsia-300">{x.text}</p>
-              <p className="text-white/60 text-xs mt-1">Verified eMoney member</p>
+              <p className="text-white/60 text-xs mt-1">
+                Verified eMoney member
+              </p>
             </div>
           ))}
         </div>
@@ -118,7 +157,7 @@ export default function Checkout() {
         <div className="rounded-2xl border border-white/10 bg-black/40 p-5 text-center">
           <h3 className="text-lg font-semibold">Start Your Free 3-Day Challenge</h3>
           <p className="mt-1 text-sm text-white/70">
-            Access the Clearance AI + Community instantly.
+            Access Clearance AI + Training + Community instantly.
           </p>
 
           <div className="mt-4 rounded-xl border border-white/10 bg-black/50 p-3">
