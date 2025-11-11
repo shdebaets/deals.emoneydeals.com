@@ -3,7 +3,7 @@
 import { WhopCheckoutEmbed, useCheckoutEmbedControls } from "@whop/checkout/react";
 import { gaEvent } from "./(lib)/ga";
 import {
-  UserIcon,
+  UserIcon, 
   ShoppingBagIcon,
   BanknotesIcon,
 } from "@heroicons/react/24/outline";
