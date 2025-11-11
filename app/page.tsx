@@ -208,7 +208,7 @@ export default function Checkout() {
             />
           </div>
           <p className="mt-3 text-xs text-white/60">
-            Secured by Whop • Cancel anytime
+            Secured by Whop • Cancel anytime • You will not be charged today
           </p>
         </div>
       </section>
