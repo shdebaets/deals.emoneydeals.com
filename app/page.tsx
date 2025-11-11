@@ -121,17 +121,17 @@ export default function Checkout() {
             {
               name: "Redwake",
               text: "$0.01 vanity → sold $250",
-              img: "/images/win1.jpg",
+              img: "/success/vanitysold.png",
             },
             {
               name: "Ryan",
               text: "Pokémon haul → $180 profit",
-              img: "/images/win2.jpg",
+              img: "/success/pokemonprofit.png",
             },
             {
-              name: "Debra",
-              text: "$600 item → $0.06 → flipped for hundreds",
-              img: "/images/win3.jpg",
+              name: "Jeffery",
+              text: "$250 Profit From Chairs",
+              img: "/success/chairs.png.jpg",
             },
           ].map((x) => (
             <div
@@ -166,6 +166,7 @@ export default function Checkout() {
               planId="plan_QOk7Ldw02rMJH"
               theme="dark"
               fallback={<>Loading…</>}
+              hidePrice={true}
             />
           </div>
           <p className="mt-3 text-xs text-white/60">
