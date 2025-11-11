@@ -81,55 +81,60 @@ export default function Checkout() {
         </div>
       </section>
 
-      {/* 3-STEP FLOW (replaces HOW IT WORKS) */}
-      <section className="mx-auto mt-16 max-w-5xl">
-        <div className="rounded-3xl border border-white/15 bg-black/40 px-6 py-6 sm:px-10 sm:py-8">
-          <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+      {/* 3-STEP FLOW (simple + cleaner) */}
+      <section className="mx-auto mt-16 max-w-3xl">
+        <div className="rounded-2xl border border-white/15 bg-black/30 px-4 py-4 sm:px-8 sm:py-5">
+          <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/40">
+            3 SIMPLE STEPS
+          </p>
+
+          <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-between">
             {/* STEP 1 */}
-            <div className="flex flex-col items-center text-center gap-2">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
-                <UserIcon className="h-6 w-6 text-white/80" />
+            <div className="flex flex-col items-center text-center gap-1">
+              <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/5">
+                <UserIcon className="h-5 w-5 text-white/80" />
               </div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
+              <p className="text-[11px] font-semibold tracking-[0.18em] text-white/60">
                 STEP 1
               </p>
-              <p className="text-base font-semibold">Join Community</p>
+              <p className="text-sm font-semibold">Join Community</p>
             </div>
 
             {/* ARROW */}
             <div className="hidden sm:flex flex-1 justify-center">
-              <span className="text-3xl text-white/40">➜</span>
+              <span className="text-2xl text-white/30">➝</span>
             </div>
 
             {/* STEP 2 */}
-            <div className="flex flex-col items-center text-center gap-2">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
-                <ShoppingBagIcon className="h-6 w-6 text-white/80" />
+            <div className="flex flex-col items-center text-center gap-1">
+              <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/5">
+                <ShoppingBagIcon className="h-5 w-5 text-white/80" />
               </div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
+              <p className="text-[11px] font-semibold tracking-[0.18em] text-white/60">
                 STEP 2
               </p>
-              <p className="text-base font-semibold">Buy</p>
+              <p className="text-sm font-semibold">Grab Items</p>
             </div>
 
             {/* ARROW */}
             <div className="hidden sm:flex flex-1 justify-center">
-              <span className="text-3xl text-white/40">➜</span>
+              <span className="text-2xl text-white/30">➝</span>
             </div>
 
             {/* STEP 3 */}
-            <div className="flex flex-col items-center text-center gap-2">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
-                <BanknotesIcon className="h-6 w-6 text-white/80" />
+            <div className="flex flex-col items-center text-center gap-1">
+              <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/5">
+                <BanknotesIcon className="h-5 w-5 text-white/80" />
               </div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
+              <p className="text-[11px] font-semibold tracking-[0.18em] text-white/60">
                 STEP 3
               </p>
-              <p className="text-base font-semibold">Sell</p>
+              <p className="text-sm font-semibold">Sell for Profit</p>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* REAL PEOPLE */}
       <section className="mx-auto mt-16 max-w-5xl text-center">
