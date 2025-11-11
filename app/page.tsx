@@ -179,7 +179,7 @@ export default function Checkout() {
       
               {/* RESULT */}
               <p className="mt-3 text-sm font-semibold text-center text-fuchsia-300">
-                {x.result}
+                
               </p>
             </div>
           ))}
