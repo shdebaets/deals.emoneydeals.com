@@ -101,17 +101,22 @@ export default function Checkout() {
               key={x.day}
               className="rounded-2xl border border-white/10 bg-black/40 p-4 flex flex-col items-center"
             >
-              <img
-                src={x.img}
-                alt={x.day}
-                className="h-full w-full object-cover"
-              />
-              <p className="font-semibold mb-1">{x.day}</p>
+              {/* Consistent image container */}
+              <div className="w-full overflow-hidden rounded-xl bg-black/70 aspect-[4/3]">
+                <img
+                  src={x.img}
+                  alt={x.day}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+      
+              <p className="font-semibold mt-3">{x.day}</p>
               <p className="text-white/70">{x.desc}</p>
             </div>
           ))}
         </div>
       </section>
+
 
       {/* REAL PEOPLE */}
       <section className="mx-auto mt-16 max-w-5xl text-center">
