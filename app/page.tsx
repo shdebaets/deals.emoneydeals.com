@@ -125,7 +125,7 @@ export default function Checkout() {
               itemImg: "/success/82off.jpg",          // JUST the item pic
               avatar: "/success/image2.jpeg",            // profile photo
               quote:
-                "Got two for 82% off, thats $800 profit",
+                "Got two tillers for 82% off, thats $800 profit 💯",
             },
             {
               name: "Ryan",
@@ -141,7 +141,7 @@ export default function Checkout() {
               itemImg: "/success/vacuum1.jpg",
               avatar: "/success/image3.jpeg",
               quote:
-                "$80 vacuums in my first day, two already sold for $200",
+                "$80 vacuums in my first day, two already sold for $200 each",
             },
           ].map((x) => (
             <div
