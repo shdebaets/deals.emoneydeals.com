@@ -70,12 +70,12 @@ export default function Checkout() {
         <div className="lg:w-1/2">
           <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-white/10 shadow-[0_0_40px_rgba(236,72,153,0.4)]">
             <img
-              src="/images/first-flip-emotion.jpg"
-              alt="Member celebrating first profitable flip"
+              src="/success/car.jpg"
+              alt="Member bought a car within 3 months of joining"
               className="w-full object-cover"
             />
             <div className="absolute bottom-3 left-3 rounded-md bg-black/70 px-3 py-1 text-[11px] font-semibold text-emerald-300">
-              “Made $247 profit in 48 hours!”
+              “it’s crazy how I didn’t know it would be this easy if I just wasn’t so damn lazy”
             </div>
           </div>
         </div>
