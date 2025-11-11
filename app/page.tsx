@@ -2,6 +2,11 @@
 
 import { WhopCheckoutEmbed, useCheckoutEmbedControls } from "@whop/checkout/react";
 import { gaEvent } from "./(lib)/ga";
+import {
+  UserIcon,
+  ShoppingBagIcon,
+  BanknotesIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Checkout() {
   const ref = useCheckoutEmbedControls();
@@ -76,65 +81,70 @@ export default function Checkout() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="mx-auto mt-16 max-w-5xl text-center">
-        <h2 className="text-2xl font-semibold">How It Works</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3 text-sm">
-          {[
-            {
-              day: "Day 1 → Find",
-              desc: "Use our AI to locate hidden clearance deals near you.",
-              img: "/success/aicheck.png.jpg",
-            },
-            {
-              day: "Day 2 → Flip",
-              desc: "Buy, list, and flip your first profitable item.",
-              img: "/success/listing.png.jpg",
-            },
-            {
-              day: "Day 3 → Scale",
-              desc: "Copy proven flips and start stacking consistent income.",
-              img: "/success/profit.png.jpg",
-            },
-          ].map((x) => (
-            <div
-              key={x.day}
-              className="rounded-2xl border border-white/10 bg-black/40 p-4 flex flex-col items-center"
-            >
-              {/* Consistent image container */}
-              <div className="w-full overflow-hidden rounded-xl bg-black/70 aspect-[4/3]">
-                <img
-                  src={x.img}
-                  alt={x.day}
-                  className="h-full w-full object-cover"
-                />
+      {/* 3-STEP FLOW (replaces HOW IT WORKS) */}
+      <section className="mx-auto mt-16 max-w-5xl">
+        <div className="rounded-3xl border border-white/15 bg-black/40 px-6 py-6 sm:px-10 sm:py-8">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+            {/* STEP 1 */}
+            <div className="flex flex-col items-center text-center gap-2">
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
+                <UserIcon className="h-6 w-6 text-white/80" />
               </div>
-      
-              <p className="font-semibold mt-3">{x.day}</p>
-              <p className="text-white/70">{x.desc}</p>
+              <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
+                STEP 1
+              </p>
+              <p className="text-base font-semibold">Join Community</p>
             </div>
-          ))}
+
+            {/* ARROW */}
+            <div className="hidden sm:flex flex-1 justify-center">
+              <span className="text-3xl text-white/40">➜</span>
+            </div>
+
+            {/* STEP 2 */}
+            <div className="flex flex-col items-center text-center gap-2">
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
+                <ShoppingBagIcon className="h-6 w-6 text-white/80" />
+              </div>
+              <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
+                STEP 2
+              </p>
+              <p className="text-base font-semibold">Buy</p>
+            </div>
+
+            {/* ARROW */}
+            <div className="hidden sm:flex flex-1 justify-center">
+              <span className="text-3xl text-white/40">➜</span>
+            </div>
+
+            {/* STEP 3 */}
+            <div className="flex flex-col items-center text-center gap-2">
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
+                <BanknotesIcon className="h-6 w-6 text-white/80" />
+              </div>
+              <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
+                STEP 3
+              </p>
+              <p className="text-base font-semibold">Sell</p>
+            </div>
+          </div>
         </div>
       </section>
-
 
       {/* REAL PEOPLE */}
       <section className="mx-auto mt-16 max-w-5xl text-center">
         <h2 className="text-2xl font-semibold">Real People. Real Profits.</h2>
-      
+
         <div className="mt-6 grid gap-4 sm:grid-cols-3 text-sm">
           {[
             {
               name: "Emmanuel",
-              
-              itemImg: "/success/82off.jpg",          // JUST the item pic
-              avatar: "/success/image2.jpeg",            // profile photo
-              quote:
-                "Got two tillers for 82% off, thats $800 profit 💯",
+              itemImg: "/success/82off.jpg",
+              avatar: "/success/image2.jpeg",
+              quote: "Got two tillers for 82% off, thats $800 profit 💯",
             },
             {
               name: "Ryan",
-             
               itemImg: "/success/pokemoncar.jpg",
               avatar: "/success/image5.jpeg",
               quote:
@@ -142,7 +152,6 @@ export default function Checkout() {
             },
             {
               name: "Jeff",
-              
               itemImg: "/success/vacuum1.jpg",
               avatar: "/success/image3.jpeg",
               quote:
@@ -153,16 +162,10 @@ export default function Checkout() {
               key={x.name}
               className="rounded-2xl border border-white/10 bg-black/40 p-4 text-left flex flex-col"
             >
-              {/* ITEM PHOTO ONLY */}
               <div className="w-full overflow-hidden rounded-xl bg-black/70 aspect-[4/3]">
-                <img
-                  src={x.itemImg}
-                  
-                  className="h-full w-full object-cover"
-                />
+                <img src={x.itemImg} className="h-full w-full object-cover" />
               </div>
-      
-              {/* PROFILE + NAME */}
+
               <div className="mt-3 flex items-center gap-2">
                 <img
                   src={x.avatar}
@@ -176,20 +179,15 @@ export default function Checkout() {
                   </p>
                 </div>
               </div>
-      
-              {/* QUOTE */}
-              <p className="mt-2 text-xs text-white/75 italic">
-                “{x.quote}”
-              </p>
-      
-              {/* RESULT */}
-              <p className="mt-3 text-sm font-semibold text-center text-fuchsia-300">
-                
-              </p>
+
+              <p className="mt-2 text-xs text-white/75 italic">“{x.quote}”</p>
+
+              <p className="mt-3 text-sm font-semibold text-center text-fuchsia-300"></p>
             </div>
           ))}
         </div>
       </section>
+
       {/* CHECKOUT */}
       <section className="mx-auto mt-16 max-w-[700px]" id="checkout">
         <div className="rounded-2xl border border-white/10 bg-black/40 p-5 text-center">
@@ -216,8 +214,13 @@ export default function Checkout() {
       {/* FOOTER */}
       <footer className="mx-auto mt-10 max-w-[700px] text-center text-xs text-white/50">
         © {new Date().getFullYear()} eMoney Reselling •{" "}
-        <a href="/tos" className="underline hover:text-white">Terms</a> •{" "}
-        <a href="/privacy" className="underline hover:text-white">Privacy</a>
+        <a href="/tos" className="underline hover:text-white">
+          Terms
+        </a>{" "}
+        •{" "}
+        <a href="/privacy" className="underline hover:text-white">
+          Privacy
+        </a>
       </footer>
     </main>
   );
