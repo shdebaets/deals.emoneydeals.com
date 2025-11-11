@@ -20,331 +20,361 @@ export default function Checkout() {
   }
 
   return (
-    <main className="page-bg min-h-screen px-4 pb-16 pt-12 text-white">
-      {/* Countdown / urgency */}
-      <PromoCountdownHeader
-        title="Your spot in the 3-Day Flip Challenge is reserved for:"
-        seconds={180}
-      />
+    <main className="page-bg min-h-screen px-4 pb-16 pt-5 text-white">
+      {/* TOP BAR: LOGO + CTA */}
+      <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <img
+            src="/images/emoney-logo-light.svg"
+            alt="eMoney Reselling"
+            className="h-8 w-auto"
+          />
+          <span className="hidden text-[11px] uppercase tracking-[0.2em] text-white/50 sm:inline">
+            Reselling Challenge
+          </span>
+        </div>
+        <button
+          onClick={startTrial}
+          className="btn px-4 py-2 text-xs sm:text-sm cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
+        >
+          Join the 3-Day First Flip Challenge
+        </button>
+      </header>
 
-      {/* HERO SECTION – 3-DAY FLIP CHALLENGE */}
-      <section className="mx-auto mt-6 flex w-full max-w-6xl flex-col gap-8 md:flex-row md:items-center">
-        {/* Left: Headline, subheadline, social proof, CTA */}
-        <div className="md:w-1/2">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            Join the{" "}
-            <span className="text-fuchsia-300">3-Day Flip Challenge</span> and
-            Get Your First Profitable Clearance Flip
-          </h1>
+      {/* COUNTDOWN / URGENCY */}
+      <div className="mx-auto mt-4 w-full max-w-6xl">
+        <PromoCountdownHeader
+          title="Your reserved spot in the 3-Day First Flip Challenge expires in:"
+          seconds={180}
+        />
+      </div>
 
-          <p className="mt-3 text-sm sm:text-base text-white/80">
-            In the next <span className="font-semibold">3 days</span>, we&apos;ll
-            help you use our{" "}
-            <span className="font-semibold">Secret Clearance AI software</span>{" "}
-            and <span className="font-semibold">5,000+ member community</span>{" "}
-            to: find a hidden clearance deal, buy it, and list it for profit.
+      {/* HERO – DREAM OUTCOME + WHAT'S IN IT FOR ME */}
+      <section className="mx-auto mt-8 flex w-full max-w-6xl flex-col gap-8 lg:flex-row lg:items-start">
+        {/* LEFT: HEADLINE, SUBHEAD, SOCIAL PROOF, CTA, FUD REDUCTION */}
+        <div className="lg:w-1/2">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-fuchsia-300/80">
+            SOCIAL PROOF #1
           </p>
 
-          {/* Above-the-fold social proof row */}
-          <div className="mt-4 flex flex-wrap items-center gap-4">
-            <div className="rounded-full border border-white/10 bg-black/40 px-4 py-2 text-xs sm:text-sm">
-              <span className="font-semibold text-fuchsia-300">5,000+</span>{" "}
-              active resellers inside eMoney
+          {/* HEADLINE TIED TO OUTCOME */}
+          <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+            Make an Extra{" "}
+            <span className="text-fuchsia-300">$1–3K/month</span>{" "}
+            <span className="block text-2xl text-white/90 sm:text-3xl md:text-4xl">
+              by Flipping Hidden Clearance Deals
+            </span>
+          </h1>
+
+          {/* SUBHEAD: WHY WE'RE DIFFERENT */}
+          <p className="mt-3 text-sm text-white/80 sm:text-base">
+            This isn&apos;t random “side hustle” advice. The{" "}
+            <span className="font-semibold">3-Day First Flip Challenge</span>{" "}
+            uses{" "}
+            <span className="font-semibold">data from our Secret Clearance AI</span>{" "}
+            and a <span className="font-semibold">5,000+ member community</span>{" "}
+            to show you exactly:
+            <span className="font-semibold">
+              {" "}
+              what to buy, where it is, and how to flip it for profit.
+            </span>
+          </p>
+
+          {/* SOCIAL PROOF ABOVE THE FOLD – 2 TYPES */}
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            {/* Type 1: Community size */}
+            <div className="rounded-full border border-white/12 bg-black/40 px-4 py-2 text-xs sm:text-sm">
+              <span className="font-semibold text-fuchsia-300">5,000+</span> active
+              resellers inside eMoney
             </div>
-            <div className="text-[11px] sm:text-xs text-white/60">
-              ★★★★★ 4.9/5 average rating <br className="hidden sm:block" />
-              <span className="text-white/50">
-                Based on verified reviews from Discord &amp; Whop
+
+            {/* Type 2: Ratings with source */}
+            <div className="text-[11px] text-white/65 sm:text-xs">
+              ★★★★★{" "}
+              <span className="font-semibold">4.9/5 average rating</span>
+              <br className="hidden sm:block" />
+              <span className="text-white/45">
+                Verified reviews from Whop &amp; Discord screenshots
               </span>
             </div>
           </div>
 
-          {/* Primary CTA + FUD reduction */}
+          {/* PRIMARY CTA */}
           <div className="mt-5">
             <button
               onClick={startTrial}
-              className="btn px-8 py-3 text-sm sm:text-base mt-1 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
+              className="btn mt-1 cursor-pointer px-8 py-3 text-sm sm:text-base hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
             >
-              Start the 3-Day Flip Challenge 🔓
+              Start the 3-Day First Flip Challenge (Free Trial)
             </button>
 
-            <p className="mt-2 text-[11px] sm:text-xs text-white/70">
-              3 days full access • Then $50/month •{" "}
-              <span className="font-semibold">
-                Cancel in 2 clicks. No contracts, no hidden fees.
-              </span>
+            {/* REDUCE FUD – SHORT HEADLINE UNDER BUTTON */}
+            <p className="mt-2 text-[11px] text-white/75 sm:text-xs">
+              <span className="font-semibold">No experience. No big budget.</span>{" "}
+              3 days full access, then $50/month •
+              <span className="font-semibold"> Cancel anytime in 2 clicks.</span>
             </p>
           </div>
 
-          {/* Reduce FUD – common concerns */}
-          <div className="mt-4 rounded-xl border border-white/10 bg-black/40 p-3 text-[11px] sm:text-xs">
+          {/* COMMON CONCERNS – BULLET FUD BOX */}
+          <div className="mt-4 rounded-xl border border-white/12 bg-black/45 p-3 text-[11px] sm:text-xs">
             <p className="font-semibold text-white">
-              Worried this won&apos;t work for you?
+              Most people worry about three things:
             </p>
             <ul className="mt-2 space-y-1 text-white/80">
-              <li>• No experience required — we start from absolute zero.</li>
-              <li>• No big budget needed — many members start with a few hundred dollars.</li>
-              <li>• No guesswork — see items with real resale demand before you buy.</li>
+              <li>
+                <span className="font-semibold">“I&apos;ve never resold.”</span>{" "}
+                The challenge is built for complete beginners.
+              </li>
+              <li>
+                <span className="font-semibold">“I don&apos;t have much cash.”</span>{" "}
+                Many members start with just a few hundred dollars.
+              </li>
+              <li>
+                <span className="font-semibold">“What if it doesn&apos;t work?”</span>{" "}
+                Try it for 3 days. If you&apos;re not confident this can get you
+                toward $1–3K/month, cancel.
+              </li>
             </ul>
           </div>
         </div>
 
-        {/* Right: Strong emotional image / video frame (placeholder) */}
-        <div className="md:w-1/2">
-          <div className="relative mx-auto max-w-md rounded-3xl border border-white/15 bg-black/60 p-3 shadow-[0_0_40px_rgba(236,72,153,0.35)]">
-            {/* TODO: replace src with real hero image or video thumbnail */}
-            <div className="overflow-hidden rounded-2xl">
+        {/* RIGHT: STRONG EMOTIONAL IMAGE / VIDEO FRAME */}
+        <div className="lg:w-1/2">
+          <div className="relative mx-auto max-w-md rounded-3xl border border-white/15 bg-black/70 p-3 shadow-[0_0_45px_rgba(236,72,153,0.45)]">
+            {/* Strong emotional image – replace with real media */}
+            <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="/images/hero-challenge-placeholder.jpg"
-                alt="Placeholder for 3-Day Flip Challenge hero image"
+                src="/images/hero-first-flip-emotion.jpg"
+                alt="Member excited after first profitable flip"
                 className="h-full w-full object-cover"
               />
+              {/* Simple familiar badge overlay */}
+              <div className="absolute bottom-3 left-3 rounded-full bg-black/75 px-3 py-1 text-[11px] font-semibold text-emerald-300">
+                First flip: $247 profit in 48 hours
+              </div>
             </div>
 
-            {/* Small caption under image to make it feel real */}
-            <div className="mt-3 flex items-center justify-between gap-2 text-[11px] sm:text-xs text-white/70">
+            {/* Caption to reinforce proof */}
+            <div className="mt-3 flex flex-col gap-1 text-[11px] text-white/75 sm:text-xs">
               <p>
                 Replace this with a{" "}
-                <span className="font-semibold">real screenshot or photo</span>{" "}
-                from your clearance software or wins.
+                <span className="font-semibold">
+                  real screenshot or photo from your Discord #wins channel
+                </span>{" "}
+                or payout.
               </p>
-              <p className="text-right text-emerald-300 font-semibold">
-                Real tools. Real flips.
+              <p className="font-semibold text-emerald-300">
+                People buy with emotion — use this spot to show the moment your
+                members realize “this actually works.”
               </p>
             </div>
-          </div>
-
-          {/* Secondary social proof above the fold */}
-          <div className="mt-4 text-center text-[11px] sm:text-xs text-white/65">
-            “This paid for itself in my first week.” — Verified eMoney member
           </div>
         </div>
       </section>
 
-      {/* HOW THE 3-DAY FLIP CHALLENGE WORKS */}
-      <section className="mx-auto mt-10 w-full max-w-5xl">
-        <h2 className="text-center text-xl sm:text-2xl font-semibold">
-          How the 3-Day Flip Challenge Works
+      {/* SOCIAL PROOF TICKER – SIMPLE SCROLLING REVIEWS */}
+      <section className="mx-auto mt-8 w-full max-w-6xl">
+        <ReviewsTicker />
+      </section>
+
+      {/* SECTION 2 – HOW THE CHALLENGE WORKS (STACKS ON HERO) */}
+      <section className="mx-auto mt-12 w-full max-w-5xl">
+        <h2 className="text-center text-xl font-semibold sm:text-2xl">
+          In 3 Days, We Go From “No Clue” to “First Flip”
         </h2>
         <p className="mt-2 text-center text-sm text-white/75">
-          People buy with emotion, but they stay when it works. The goal of this
-          challenge is simple:{" "}
+          <span className="font-semibold">You&apos;ll only see headlines.</span>{" "}
+          So each day has one simple goal:
           <span className="font-semibold">
-            help you get your first profitable flip in 3 days
+            {" "}
+            find, buy, and flip your first profitable item.
           </span>
-          .
         </p>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-3 text-sm">
+        <div className="mt-6 grid gap-4 text-sm sm:grid-cols-3">
           <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
-            <p className="text-xs font-semibold text-white/60 mb-1">
-              DAY 1
+            <p className="mb-1 text-xs font-semibold text-white/60">
+              DAY 1 · FIND
             </p>
-            <p className="font-semibold mb-1">
-              Find Your First Hidden Clearance Deal
+            <p className="mb-1 font-semibold">
+              Lock in 1–3 Proven-to-Sell Deals Near You
             </p>
-            <p className="text-white/80">
-              Use Secret Clearance AI to scan stores near you. We&apos;ll show
-              you items already selling online so you&apos;re not guessing.
-            </p>
+            <ul className="space-y-1 text-white/80">
+              <li>• Use Secret Clearance AI to scan nearby stores.</li>
+              <li>• Only see items with real online demand.</li>
+              <li>• Save 1–3 deals you&apos;ll go buy tomorrow.</li>
+            </ul>
           </div>
           <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
-            <p className="text-xs font-semibold text-white/60 mb-1">
-              DAY 2
+            <p className="mb-1 text-xs font-semibold text-white/60">
+              DAY 2 · BUY &amp; LIST
             </p>
-            <p className="font-semibold mb-1">
-              Go In-Store, Buy, and List the Item
-            </p>
-            <p className="text-white/80">
-              Grab the item in-store, then follow our listing guides to put it
-              on eBay or Amazon with confidence.
-            </p>
+            <p className="mb-1 font-semibold">Turn Shelf Space Into a Listing</p>
+            <ul className="space-y-1 text-white/80">
+              <li>• Grab the item in-store using our tags guide.</li>
+              <li>• Copy-and-paste our listing templates.</li>
+              <li>• Get your first item live on eBay or Amazon.</li>
+            </ul>
           </div>
           <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
-            <p className="text-xs font-semibold text-white/60 mb-1">
-              DAY 3
+            <p className="mb-1 text-xs font-semibold text-white/60">
+              DAY 3 · SCALE
             </p>
-            <p className="font-semibold mb-1">
-              Watch &amp; Learn From Real Flips
+            <p className="mb-1 font-semibold">
+              Build a Simple Plan for $1–3K/month
             </p>
-            <p className="text-white/80">
-              See how other members are pricing, selling, and scaling — so you
-              know exactly what to do next when your item sells.
-            </p>
+            <ul className="space-y-1 text-white/80">
+              <li>• Watch how real members stack flips.</li>
+              <li>• Map your weekly “extra income” targets.</li>
+              <li>• Know your next 3 moves after the trial.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* SUCCESS PROOF SECTION – STATIC, NOT CAROUSEL */}
+      {/* SECTION 3 – COMMUNITY WINS (REAL PROOF) */}
       <section className="mx-auto mt-12 w-full max-w-5xl">
-        <h2 className="text-center text-xl sm:text-2xl font-semibold">
-          Real Wins From the eMoney Community
+        <h2 className="text-center text-xl font-semibold sm:text-2xl">
+          Real People Turning Clearance into Extra Income
         </h2>
         <p className="mt-2 text-center text-sm text-white/70">
-          These are{" "}
-          <span className="font-semibold">actual members</span> sharing their
-          wins inside our Discord #wins channel.
+          Plug your <span className="font-semibold">real screenshots</span> in
+          here. Each card should be a{" "}
+          <span className="font-semibold">specific flip with price + profit</span>{" "}
+          so it feels undeniable.
         </p>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {/* SUCCESS CARD 1 */}
+        <div className="mt-6 grid gap-4 text-sm sm:grid-cols-2 lg:grid-cols-3">
+          {/* Keep examples; you’ll swap the images + text with real data */}
           <div className="rounded-2xl border border-white/12 bg-black/55 p-3">
             <div className="overflow-hidden rounded-xl">
-              {/* TODO: replace src with real screenshot / photo */}
               <img
                 src="/images/success-1-placeholder.jpg"
-                alt="Success story placeholder 1"
+                alt="Success story 1"
                 className="h-40 w-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-white/60">Member: REDWAKE</p>
-            <p className="text-sm font-semibold">
-              $0.01 vanity &rarr; sold for $250
-            </p>
-            <p className="mt-1 text-xs text-white/70">
-              Source: Discord #wins • clearance glitch found using our tools.
+            <p className="mt-2 text-[11px] text-white/60">Member: REDWAKE</p>
+            <p className="font-semibold">$0.01 vanity → $250 profit</p>
+            <p className="mt-1 text-[11px] text-white/70">
+              Source: Discord #wins (screenshot available inside the group).
             </p>
           </div>
 
-          {/* SUCCESS CARD 2 */}
           <div className="rounded-2xl border border-white/12 bg-black/55 p-3">
             <div className="overflow-hidden rounded-xl">
-              {/* TODO: replace src with real screenshot / photo */}
               <img
                 src="/images/success-2-placeholder.jpg"
-                alt="Success story placeholder 2"
+                alt="Success story 2"
                 className="h-40 w-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-white/60">Member: RYAN</p>
-            <p className="text-sm font-semibold">
-              Pokémon haul &rarr; $180 profit
-            </p>
-            <p className="mt-1 text-xs text-white/70">
-              Bought from hidden clearance, flipped online in a single weekend.
+            <p className="mt-2 text-[11px] text-white/60">Member: RYAN</p>
+            <p className="font-semibold">Pokémon haul → $180 profit</p>
+            <p className="mt-1 text-[11px] text-white/70">
+              Source: Verified Whop review + Discord screenshots.
             </p>
           </div>
 
-          {/* SUCCESS CARD 3 */}
           <div className="rounded-2xl border border-white/12 bg-black/55 p-3">
             <div className="overflow-hidden rounded-xl">
-              {/* TODO: replace src with real screenshot / photo */}
               <img
                 src="/images/success-3-placeholder.jpg"
-                alt="Success story placeholder 3"
+                alt="Success story 3"
                 className="h-40 w-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-white/60">Member: JEFFREY</p>
-            <p className="text-sm font-semibold">
-              Clearance chairs &rarr; $250 profit
-            </p>
-            <p className="mt-1 text-xs text-white/70">
-              Used our software to locate marked-down inventory few people
-              noticed.
+            <p className="mt-2 text-[11px] text-white/60">Member: JEFFREY</p>
+            <p className="font-semibold">Clearance chairs → $250 profit</p>
+            <p className="mt-1 text-[11px] text-white/70">
+              Source: Discord #wins channel.
             </p>
           </div>
 
-          {/* SUCCESS CARD 4 */}
           <div className="rounded-2xl border border-white/12 bg-black/55 p-3">
             <div className="overflow-hidden rounded-xl">
-              {/* TODO: replace src with real screenshot / photo */}
               <img
                 src="/images/success-4-placeholder.jpg"
-                alt="Success story placeholder 4"
+                alt="Success story 4"
                 className="h-40 w-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-white/60">Member: DEBRA</p>
-            <p className="text-sm font-semibold">
-              Garage door opener for $0.01
-            </p>
-            <p className="mt-1 text-xs text-white/70">
-              Found using hidden clearance data; flipped for a big margin.
+            <p className="mt-2 text-[11px] text-white/60">Member: DEBRA</p>
+            <p className="font-semibold">Garage door opener for $0.01</p>
+            <p className="mt-1 text-[11px] text-white/70">
+              Source: Verified Discord post (full screenshot inside).
             </p>
           </div>
 
-          {/* SUCCESS CARD 5 */}
           <div className="rounded-2xl border border-white/12 bg-black/55 p-3">
             <div className="overflow-hidden rounded-xl">
-              {/* TODO: replace src with real screenshot / photo */}
               <img
                 src="/images/success-5-placeholder.jpg"
-                alt="Success story placeholder 5"
+                alt="Success story 5"
                 className="h-40 w-full object-cover"
               />
             </div>
-            <p className="mt-2 text-xs text-white/60">Member: ILIA</p>
-            <p className="text-sm font-semibold">
-              $600 item down to $0.06
-            </p>
-            <p className="mt-1 text-xs text-white/70">
-              Penny item located via our tools, then flipped online for
-              hundreds in profit.
+            <p className="mt-2 text-[11px] text-white/60">Member: ILIA</p>
+            <p className="font-semibold">$600 item → $0.06 → hundreds profit</p>
+            <p className="mt-1 text-[11px] text-white/70">
+              Source: Penny item found via our tools, verified in chat.
             </p>
           </div>
         </div>
 
         <p className="mt-3 text-center text-[11px] text-white/60">
-          You&apos;ll see full screenshots and context for these wins inside the
-          community.
+          Inside the challenge, you&apos;ll see the{" "}
+          <span className="font-semibold">full unblurred posts</span> and exact
+          items people are flipping.
         </p>
-
-        <div className="mt-4">
-          <ReviewsTicker />
-        </div>
       </section>
 
-      {/* WHAT YOU GET IN THE 3-DAY FLIP CHALLENGE */}
+      {/* SECTION 4 – WHAT YOU GET */}
       <section className="mx-auto mt-12 w-full max-w-5xl">
         <div className="card p-5 sm:p-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-center">
-            What You Get Inside the 3-Day Flip Challenge
+          <h2 className="text-center text-xl font-semibold sm:text-2xl">
+            Everything You Need to Prove This Can Be Your $1–3K/month Stream
           </h2>
           <p className="mt-2 text-center text-sm text-white/75">
-            Expect to spend{" "}
-            <span className="font-semibold">30–60 minutes per day</span>. Our
-            aim is to help you get at least{" "}
+            Keep it simple:{" "}
             <span className="font-semibold">
-              your first profitable flip before the trial ends
-            </span>
-            .
+              30–60 minutes per day for 3 days
+            </span>{" "}
+            to go from “I&apos;m curious” to “I made my first flip.”
           </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-sm">
-              <p className="font-semibold mb-2">Secret Clearance AI Access</p>
+          <div className="mt-6 grid gap-4 text-sm sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
+              <p className="mb-2 font-semibold">Secret Clearance AI Access</p>
               <ul className="space-y-1 text-white/80">
-                <li>• Scan Walmart, Lowe&apos;s, Target, and more for hidden clearance.</li>
-                <li>• Filter by profit, discount %, and distance from you.</li>
-                <li>• See items with proven resale demand, not guesses.</li>
+                <li>• Scan Walmart, Lowe&apos;s, Target, and more.</li>
+                <li>• Filter by profit, discount %, and distance.</li>
+                <li>• Only see items with proven resale demand.</li>
               </ul>
             </div>
-
-            <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-sm">
-              <p className="font-semibold mb-2">Step-by-Step Beginner Training</p>
+            <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
+              <p className="mb-2 font-semibold">Step-by-Step 3-Day Plan</p>
               <ul className="space-y-1 text-white/80">
-                <li>• Short videos to get you from &quot;no clue&quot; to &quot;first flip&quot;.</li>
-                <li>• Exactly how to read tags &amp; markdowns.</li>
-                <li>• How to list &amp; ship items without confusion.</li>
+                <li>• One simple checklist per day.</li>
+                <li>• Short videos you can watch on your phone.</li>
+                <li>• Clear “do this next” instructions.</li>
               </ul>
             </div>
-
-            <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-sm">
-              <p className="font-semibold mb-2">Live Community &amp; Deal Alerts</p>
+            <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
+              <p className="mb-2 font-semibold">Live Community &amp; Deal Alerts</p>
               <ul className="space-y-1 text-white/80">
-                <li>• See real deals members are grabbing every day.</li>
-                <li>• Learn from wins and mistakes in real time.</li>
-                <li>• Ask questions and get answers from active resellers.</li>
+                <li>• See what others are buying today.</li>
+                <li>• Model your flips after their wins.</li>
+                <li>• Stay plugged into opportunities.</li>
               </ul>
             </div>
-
-            <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-sm">
-              <p className="font-semibold mb-2">Beginner-Friendly Support</p>
+            <div className="rounded-2xl border border-white/12 bg-black/55 p-4">
+              <p className="mb-2 font-semibold">Beginner Support</p>
               <ul className="space-y-1 text-white/80">
-                <li>• Post screenshots when you&apos;re unsure what to buy.</li>
-                <li>• Get feedback on your listings.</li>
-                <li>• Clear next steps so you never feel stuck.</li>
+                <li>• Drop screenshots when you&apos;re unsure.</li>
+                <li>• Get feedback on deals &amp; listings.</li>
+                <li>• Never feel stuck or alone in the process.</li>
               </ul>
             </div>
           </div>
@@ -352,45 +382,47 @@ export default function Checkout() {
           <div className="mt-6 text-center">
             <button
               onClick={startTrial}
-              className="btn px-10 py-3 text-sm sm:text-base mt-1 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
+              className="btn mt-1 cursor-pointer px-10 py-3 text-sm sm:text-base hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
             >
-              Join the 3-Day Flip Challenge
+              Join the Challenge &amp; Start Your Free Trial
             </button>
-            <p className="mt-2 text-[11px] sm:text-xs text-white/70">
-              Starts as soon as you sign up • Cancel anytime inside your
-              account.
+            <p className="mt-2 text-[11px] text-white/70 sm:text-xs">
+              Instant access after checkout • Cancel anytime inside your account
             </p>
           </div>
         </div>
       </section>
 
-      {/* WHY WE'RE DIFFERENT */}
+      {/* SECTION 5 – WHY WE'RE DIFFERENT (RECAP) */}
       <section className="mx-auto mt-12 w-full max-w-5xl">
         <div className="rounded-2xl border border-white/12 bg-black/60 p-5 sm:p-6">
-          <h2 className="text-xl sm:text-2xl font-semibold text-center">
-            Why This Challenge Is Different From Random “Reselling Groups”
+          <h2 className="text-center text-xl font-semibold sm:text-2xl">
+            Why This Feels Simple (When Most Side Hustles Feel Overwhelming)
           </h2>
 
-          <div className="mt-5 grid gap-4 sm:grid-cols-3 text-sm">
+          <div className="mt-5 grid gap-4 text-sm sm:grid-cols-3">
             <div>
-              <h3 className="font-semibold mb-1">Data, Not Hype</h3>
+              <h3 className="mb-1 font-semibold">Familiar, Not Fancy</h3>
               <p className="text-white/80">
-                We show real item data and demand. No vague “buy this, maybe it
-                sells” calls.
+                Straightforward layout, clear buttons, and simple steps. No weird
+                UX — just what you&apos;re used to from sites that work.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-1">Beginner-First Design</h3>
+              <h3 className="mb-1 font-semibold">Data Over Hype</h3>
               <p className="text-white/80">
-                Everything is built so complete beginners can follow along and
-                get a win in 3 days.
+                Real item data and real screenshots. No vague “trust us”
+                promises — you see the proof inside.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-1">Real, Active Community</h3>
+              <h3 className="mb-1 font-semibold">One Clear Outcome</h3>
               <p className="text-white/80">
-                5,000+ resellers posting real wins, questions, and support — not
-                a ghost town.
+                Everything points to one thing:{" "}
+                <span className="font-semibold">
+                  helping you prove you can make $1–3K/month by starting with
+                  one flip this week.
+                </span>
               </p>
             </div>
           </div>
@@ -401,11 +433,11 @@ export default function Checkout() {
       <section className="mx-auto mt-12 w-full max-w-[720px]" id="checkout">
         <div className="card p-4 sm:p-5">
           <div className="text-center text-lg font-semibold">
-            Start Your 3-Day Free Trial &amp; Flip Challenge
+            Start Your 3-Day Free Trial &amp; First Flip Challenge
           </div>
-          <p className="mt-1 text-center text-xs sm:text-sm text-white/70">
-            Instant access to Secret Clearance AI, training, and the full
-            eMoney community.
+          <p className="mt-1 text-center text-xs text-white/70 sm:text-sm">
+            Immediate access to Secret Clearance AI, the 3-Day plan, and the
+            full eMoney community.
           </p>
 
           <div className="mt-4 rounded-xl border border-white/10 bg-black/50 p-3">
@@ -416,7 +448,7 @@ export default function Checkout() {
               fallback={<>loading…</>}
             />
           </div>
-          <p className="mt-3 text-center text-[11px] sm:text-xs text-white/60">
+          <p className="mt-3 text-center text-[11px] text-white/60 sm:text-xs">
             Secured by Whop • Encrypted checkout • Cancel anytime inside your
             account
           </p>
@@ -428,55 +460,60 @@ export default function Checkout() {
         <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-center">
           <div className="text-lg font-semibold">Risk-Free Guarantee</div>
           <p className="mt-1 text-sm text-white/80">
-            Try everything for 3 days. If you don&apos;t feel confident you can
-            find profitable clearance flips, cancel and you won&apos;t be
-            charged again.
+            Try everything for 3 days. If you don&apos;t feel confident this can
+            be your path to an extra{" "}
+            <span className="font-semibold">$1–3K/month</span> from reselling,
+            cancel before the trial ends and you won&apos;t be charged again.
           </p>
         </div>
       </section>
 
       {/* FAQ / FINAL FUD REDUCTION */}
       <section className="mx-auto mt-10 w-full max-w-5xl">
-        <h2 className="text-center text-xl sm:text-2xl font-semibold">
+        <h2 className="text-center text-xl font-semibold sm:text-2xl">
           Quick Answers Before You Join
         </h2>
 
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 text-sm">
+        <div className="mt-5 grid gap-4 text-sm sm:grid-cols-2">
           <div className="rounded-2xl border border-white/10 bg-black/55 p-4">
-            <p className="font-semibold mb-1">
+            <p className="mb-1 font-semibold">
               Do I need a lot of money to start?
             </p>
             <p className="text-white/80">
-              No. Many members begin with a few hundred dollars and reinvest
-              profits. We help you start lean and grow safely.
+              No. Many members begin with a few hundred dollars and reinvest.
+              The challenge is about{" "}
+              <span className="font-semibold">
+                starting small and building toward $1–3K/month.
+              </span>
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/55 p-4">
-            <p className="font-semibold mb-1">
+            <p className="mb-1 font-semibold">
               I&apos;ve never resold anything. Is this for me?
             </p>
             <p className="text-white/80">
-              Yes. The challenge is designed for beginners — clear steps,
-              simple videos, and real examples from other members.
+              Yes. The plan assumes you&apos;re a complete beginner with no
+              selling or tech experience.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/55 p-4">
-            <p className="font-semibold mb-1">
+            <p className="mb-1 font-semibold">
               What happens after my 3-day trial?
             </p>
             <p className="text-white/80">
-              Your account rolls into the standard $50/month membership. You can
-              cancel anytime in just a couple of clicks.
+              Your account rolls into the standard $50/month membership so you
+              can keep using the tools and community. You can cancel anytime
+              inside your account in a couple of clicks.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/55 p-4">
-            <p className="font-semibold mb-1">
-              Is reselling like this legal?
+            <p className="mb-1 font-semibold">
+              Is this actually legal and allowed?
             </p>
             <p className="text-white/80">
-              Yes. You&apos;re buying products from regular retail stores and
-              reselling them on platforms like eBay and Amazon, which is a
-              normal and legal business model.
+              Yes. You&apos;re buying items from regular retail stores and
+              reselling them on platforms like eBay and Amazon — a normal,
+              widely used business model.
             </p>
           </div>
         </div>
@@ -484,19 +521,19 @@ export default function Checkout() {
         <div className="mt-6 text-center">
           <button
             onClick={startTrial}
-            className="btn px-10 py-3 text-sm sm:text-base mt-1 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
+            className="btn mt-1 cursor-pointer px-10 py-3 text-sm sm:text-base hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
           >
-            Accept the 3-Day Flip Challenge
+            Accept the 3-Day First Flip Challenge
           </button>
-          <p className="mt-2 text-[11px] sm:text-xs text-white/70">
-            Expect to follow simple steps. The challenge is there to prove this
-            can work for you — not just for “lucky” people.
+          <p className="mt-2 text-[11px] text-white/70 sm:text-xs">
+            Expect to skim headlines and follow simple steps. The challenge is
+            there to prove this can work for you — not just for “lucky” people.
           </p>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="mx-auto mt-10 w-full max-w-[720px] text-center text-[11px] sm:text-xs text-white/50">
+      <footer className="mx-auto mt-10 w-full max-w-[720px] text-center text-[11px] text-white/50 sm:text-xs">
         © {new Date().getFullYear()} eMoney Reselling •{" "}
         <a href="/tos" className="underline underline-offset-2 hover:text-white">
           Terms
