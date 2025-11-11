@@ -116,42 +116,75 @@ export default function Checkout() {
       {/* REAL PEOPLE */}
       <section className="mx-auto mt-16 max-w-5xl text-center">
         <h2 className="text-2xl font-semibold">Real People. Real Profits.</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+      
+        <div className="mt-6 grid gap-4 sm:grid-cols-3 text-sm">
           {[
             {
               name: "Redwake",
-              text: "$0.01 vanity → sold $250",
-              img: "/success/vanitysold.png",
+              result: "$0.01 vanity → sold $250",
+              itemImg: "/success/82off.jpg",          // JUST the item pic
+              avatar: "/success/image2.jpeg",            // profile photo
+              quote:
+                "Got two for 82% off, thats $800 profit",
             },
             {
               name: "Ryan",
-              text: "Pokémon haul → $180 profit",
-              img: "/success/pokemonprofit.png",
+              result: "Pokémon haul → $180 profit",
+              itemImg: "/success/pokemoncar.jpg",
+              avatar: "/success/image5.jpeg",
+              quote:
+                "Macys score. No limit on the ETBs, Tins or the ex boxes, easily $500 profit",
             },
             {
-              name: "Jeffery",
-              text: "$250 Profit From Chairs",
-              img: "/success/chairs.png.jpg",
+              name: "Debra",
+              result: "$250 profit from chairs",
+              itemImg: "/success/vacuum1.jpg",
+              avatar: "/success/image3.jpeg",
+              quote:
+                "$80 vacuums in my first day, two already sold for $200",
             },
           ].map((x) => (
             <div
               key={x.name}
-              className="rounded-2xl border border-white/10 bg-black/40 p-4 flex flex-col items-center"
+              className="rounded-2xl border border-white/10 bg-black/40 p-4 text-left flex flex-col"
             >
-              <img
-                src={x.img}
-                alt={x.name}
-                className="h-full w-full object-contain"
-              />
-              <p className="font-semibold text-fuchsia-300">{x.text}</p>
-              <p className="text-white/60 text-xs mt-1">
-                Verified eMoney member
+              {/* ITEM PHOTO ONLY */}
+              <div className="w-full overflow-hidden rounded-xl bg-black/70 aspect-[4/3]">
+                <img
+                  src={x.itemImg}
+                  alt={x.result}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+      
+              {/* PROFILE + NAME */}
+              <div className="mt-3 flex items-center gap-2">
+                <img
+                  src={x.avatar}
+                  alt={x.name}
+                  className="h-8 w-8 rounded-full object-cover"
+                />
+                <div className="text-xs">
+                  <p className="font-semibold text-white">{x.name}</p>
+                  <p className="text-white/60 text-[11px]">
+                    Verified eMoney member
+                  </p>
+                </div>
+              </div>
+      
+              {/* QUOTE */}
+              <p className="mt-2 text-xs text-white/75 italic">
+                “{x.quote}”
+              </p>
+      
+              {/* RESULT */}
+              <p className="mt-3 text-sm font-semibold text-center text-fuchsia-300">
+                {x.result}
               </p>
             </div>
           ))}
         </div>
       </section>
-
       {/* CHECKOUT */}
       <section className="mx-auto mt-16 max-w-[700px]" id="checkout">
         <div className="rounded-2xl border border-white/10 bg-black/40 p-5 text-center">
