@@ -120,8 +120,8 @@ export default function Checkout() {
         <div className="mt-6 grid gap-4 sm:grid-cols-3 text-sm">
           {[
             {
-              name: "Redwake",
-              result: "$0.01 vanity → sold $250",
+              name: "Emmanuel",
+              
               itemImg: "/success/82off.jpg",          // JUST the item pic
               avatar: "/success/image2.jpeg",            // profile photo
               quote:
@@ -129,15 +129,15 @@ export default function Checkout() {
             },
             {
               name: "Ryan",
-              result: "Pokémon haul → $180 profit",
+             
               itemImg: "/success/pokemoncar.jpg",
               avatar: "/success/image5.jpeg",
               quote:
                 "Macys score. No limit on the ETBs, Tins or the ex boxes, easily $500 profit",
             },
             {
-              name: "Debra",
-              result: "$250 profit from chairs",
+              name: "Jeff",
+              
               itemImg: "/success/vacuum1.jpg",
               avatar: "/success/image3.jpeg",
               quote:
