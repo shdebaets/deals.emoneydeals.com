@@ -104,7 +104,7 @@ export default function Checkout() {
               <img
                 src={x.img}
                 alt={x.day}
-                className="mb-3 h-28 w-full object-cover rounded-lg"
+                className="h-full w-full object-contain"
               />
               <p className="font-semibold mb-1">{x.day}</p>
               <p className="text-white/70">{x.desc}</p>
@@ -141,7 +141,7 @@ export default function Checkout() {
               <img
                 src={x.img}
                 alt={x.name}
-                className="mb-3 h-28 w-full object-cover rounded-lg"
+                className="h-full w-full object-contain"
               />
               <p className="font-semibold text-fuchsia-300">{x.text}</p>
               <p className="text-white/60 text-xs mt-1">
