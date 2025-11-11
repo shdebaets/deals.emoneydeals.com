@@ -2,6 +2,11 @@
 
 import { WhopCheckoutEmbed, useCheckoutEmbedControls } from "@whop/checkout/react";
 import { gaEvent } from "./(lib)/ga";
+import {
+  UserIcon,
+  ShoppingBagIcon,
+  BanknotesIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Checkout() {
   const ref = useCheckoutEmbedControls();
@@ -82,8 +87,8 @@ export default function Checkout() {
           <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
             {/* STEP 1 */}
             <div className="flex flex-col items-center text-center gap-2">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-xl">
-                👥
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
+                <UserIcon className="h-6 w-6 text-white/80" />
               </div>
               <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
                 STEP 1
@@ -98,8 +103,8 @@ export default function Checkout() {
 
             {/* STEP 2 */}
             <div className="flex flex-col items-center text-center gap-2">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-xl">
-                🛒
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
+                <ShoppingBagIcon className="h-6 w-6 text-white/80" />
               </div>
               <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
                 STEP 2
@@ -114,8 +119,8 @@ export default function Checkout() {
 
             {/* STEP 3 */}
             <div className="flex flex-col items-center text-center gap-2">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5 text-xl">
-                💰
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/5">
+                <BanknotesIcon className="h-6 w-6 text-white/80" />
               </div>
               <p className="text-xs font-semibold tracking-[0.2em] text-white/60">
                 STEP 3
